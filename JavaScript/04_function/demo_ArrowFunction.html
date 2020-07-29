@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <div id="debug"></div>
+    <script>
+        
+        test();
+        function test(){
+            alert(Date())
+        }
+        //function可以把資料傳給function
+        //副程式可以傳回給主程式
+        var test = function(){
+            alert("H")
+        }
+         
+        test();
+
+        //function test (a) {//function 名稱 (參數){return 參數}
+           // return a + 1;
+        // }
+
+
+        
+        // var test = function (a) {
+        //     return a + 1;
+        // }
+        
+        // var test = (a) => {
+        //     return a + 1;
+        // }        
+
+        // var test = (a) => { return a + 1; }    
+        var test = (a) => a + 1;    
+        
+        var answer = test(5);
+        
+        alert(answer);
+        
+    </script>
+</body>
+</html>

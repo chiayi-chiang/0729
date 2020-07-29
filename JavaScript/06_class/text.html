@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "debug">...</div>
+    <script>
+        var playerlist=[
+            {name:"J",number:2},
+            {name:"C",number:3},
+            {name:"B",number:5},
+        ]
+
+        var s = JSON.stringify(playerlist);//陣列轉字串
+        var s2 ='[{"name":"J","number":2},{"name":"C","number":3},{"name":"B","number":5}]'
+        var datalist2 = JSON.parse(s2);//字串轉陣列，[0].name->J，[0].number->2
+
+        var person ={
+            firstN:"J",
+            lastN:"L",
+            height:190,
+            sayHello: function(){
+                return "Hello!"+this.firstN;
+            }
+        }
+        //debug.innerText = person.sayHello();
+        //debug.innerText = s;
+        debug.innerText = datalist2[0].name+datalist2[0].number;
+        
+
+    </script>
+</body>
+</html>

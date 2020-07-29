@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <div id="debug"></div>
+    <script>
+        //重複命名變數名稱，var記憶體出現bug
+        var data = 3;
+        // .. ....
+        var data = 33;
+        
+        function test() {
+            let x = 100;//let變數宣告會防止名稱重複
+            // let x = 101; // Syntax error
+            if (x > 0) {
+                let y = x;
+                alert(y);
+            }
+            // alert(y); // error
+            //可宣告一 變數為一區塊
+            for (let i = 1; i <= 3; i++) {
+                alert(i);
+            }
+            // alert(i);
+
+            data = x;
+        }
+        
+        test();
+        
+        debug.innerHTML = "data = " + data;
+        
+        
+    </script>
+</body>
+</html>
